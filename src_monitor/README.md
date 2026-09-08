@@ -21,7 +21,6 @@ CIRCUITPY:
 ├── conversions.py  
 ├── display.py  
 ├── leds.py  
-├── moving_average.py  
 ├── sensors.py  
 └── settings.toml <- Included with the device, but some changes needed  
   
