@@ -1,8 +1,10 @@
 # WiFi-Enabled-Air-Quality-Monitor-and-App
 A WiFi Enabled Air Quality Monitor and PC Application based on the Adafruit Air Quality Monitor and Case
 
-Based on the Adafruit: Air Quality Monitor and Case”
-https://learn.adafruit.com/aqi-case/featured_products
+Based on the Adafruit: "Air Quality Monitor and Case”,  
+https://learn.adafruit.com/aqi-case/featured_products  
+
+![finished monitors](https://github.com/Hagtronics/WiFi-Enabled-Air-Quality-Monitor-and-App/blob/main/images/monitors.jpg)
   
 ### Improved? How?  
 1) This version puts the monitor on WiFi with a built-in web page and full JSON data dump capability.
@@ -32,23 +34,22 @@ The AQM Server also spits out data to the power/serial connection on every senso
   
 There are additions to the settings.toml file for this Monitors code. In addition to the standard WiFi network and password settings, the following settings should be added as shown below. The first addition is the name that the Monitor should use for the mDNS Hostname. This setting must be included or the code will not work. Optional settings are for various sensor offset calibrations. If these settings are not found they will default to zero, so the offsets can be considered as optional. The offsets ‘add’ to the raw reading. So if you add a humidity offset of +2 percent, the data produced by the monitor will show the humidity as being +2% higher on the output. The temperature of the Monitor is typically 5 Degrees C or so higher than ambient due to self heating so at a minimum the temperature offset calibration should be considered.
 
-![finished monitors](https://github.com/Hagtronics/WiFi-Enabled-Air-Quality-Monitor-and-App/blob/main/images/monitors.jpg)
-### My Monitors have two different displays. The simple one is just a big number from 0 to 500 that displays just the Air Quaity Index (AQI). The other display is a simple grid layout that puts the AQI, temperature, humidity and CO2 readings in a simple grid layout. All the Monitors output data is available via the App however. Since the Buttons really aren't usable with the original Adafruit case design, on my more recent monitor builds I have removed them from the case.
+#### As shown in the picture above, my Monitors have two different displays. The simple one is just a big number from 0 to 500 that displays just the Air Quaity Index (AQI). The other display is a simple grid layout that puts the AQI, temperature, humidity and CO2 readings in a simple grid layout. All the Monitors output data is available via the App however. Since the Buttons really aren't usable with the original Adafruit case design, on my more recent monitor builds I have removed them from the case.
   
 ![web page](https://github.com/Hagtronics/WiFi-Enabled-Air-Quality-Monitor-and-App/blob/main/images/screen_shot_web.PNG)
-### Once you find the devices assigned IP address, the Monitor built-in Web Page can be displayed with a web page URL like the one above. 
+#### Once you find the devices assigned IP address, the Monitor built-in Web Page can be displayed with a web page URL like the one above. 
   
 ![JSON data](https://github.com/Hagtronics/WiFi-Enabled-Air-Quality-Monitor-and-App/blob/main/images/json_data.PNG)
-### To get the monitors JSON data instead, use a web page address like the one shown above. Naturally use your devices ‘actually’ assigned IP address.
+#### To get the monitors JSON data instead, use a web page address like the one shown above. Naturally use your devices ‘actually’ assigned IP address.
   
 ### PC Side App
 The PC Side App is also written in Python 3.12 and uses either PyQt5 or 6 for the GUI. The App reads the Monitor Via WiFi to get the JSON data and display it. To find the Monitor there is an 'ini.py' file that has a dictionary of Monitor names and the Monitors specific MAC address.   
   
 ![App Data Tab](https://github.com/Hagtronics/WiFi-Enabled-Air-Quality-Monitor-and-App/blob/main/images/screen_shot_1.PNG)
-### Monitor Basic Data Tab shows just the basics.  
+#### Monitor Basic Data Tab shows just the basics.  
 
 ![App Details Tab](https://github.com/Hagtronics/WiFi-Enabled-Air-Quality-Monitor-and-App/blob/main/images/screen_shot_2.PNG)
-### The App details tab shows all the JSON data from the monitor as a table.  
+#### The App details tab shows all the JSON data from the monitor as a table.  
 
 To find a Monitor the program first looks at the Windows ARP cache. This cache holds recent MAC addresses and their currently assigned IP address. This cache is dynamic and managed by Windows. If the cache gets old it can be refreshed by a Ping operation. If the specific Monitors MAC address can’t be found in the ARP cache, then the program will scan all the addresses in the range – 192.168.68.1 to 192.168.68.254 as this is the range that most WiFi routers use for assigning devices. This scan range can be changed in the code as needed.
 If for some reason your network still gives you trouble and you can’t reliably find the MAC address then I suggest that you configure your router for static IP addresses for the Monitors.
@@ -79,7 +80,7 @@ CIRCUITPY:
 ├── sensors.py  
 └── settings.toml <- Included with the device, but some changes needed  
 
-### The Circuit Python code and drivers needed to run the Air Quality Monitor Presented Here is shown above.
+#### The Circuit Python code and drivers needed to run the Air Quality Monitor Presented Here is shown above.
 
 ### Compatibility:
 Monitor Hardware: Tested with Circuit Python V10.3.x on various Adafruit ESP32-S3 Feather boards.
