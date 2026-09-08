@@ -80,7 +80,7 @@ CIRCUITPY:
 ├── sensors.py  
 └── settings.toml <- Included with the device, but some changes needed  
 
-#### The Circuit Python code and drivers needed to run the Air Quality Monitor Presented Here is shown above.
+#### The Circuit Python code and drivers layout needed to run the Air Quality Monitor Presented Here is shown above.
 
 ### Compatibility:
 Monitor Hardware: Tested with Circuit Python V10.3.x on various Adafruit ESP32-S3 Feather boards.
