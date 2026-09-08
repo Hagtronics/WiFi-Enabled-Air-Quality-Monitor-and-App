@@ -57,10 +57,10 @@ The App will happily keep trying to get data from a previously connected Monitor
 
 If the monitor goes missing for more than 10 minutes the App will start rescanning the network looking for the specified MAC address again. This has proven a reliable method of keeping the App alive even after the Monitor is unpowered, moved to another location where it may get a different IP address.
 
-CIRCUITPY:
-├── lib
-│   ├── adafruit_bus_device  
-│   ├── adafruit_display_text  
+CIRCUITPY:  
+├── lib  
+│   ├── adafruit_bus_device    
+│   ├── adafruit_display_text   
 │   ├── adafruit_displayio_layout  
 │   ├── adafruit_pm25  
 │   ├── adafruit_register  
