@@ -1,0 +1,11 @@
+CIRCUITPY_WIFI_SSID = "Your-Wireless-Name-Here"
+CIRCUITPY_WIFI_PASSWORD = "Your-Wireless-Password-Here"
+
+MDNS_HOSTNAME = "AQM-Dad"       # Must be valid mDNS name type
+
+OFFSET_TEMPERATURE_F = -8.0     # Float
+OFFSET_CO2_PPM = 0              # Int
+OFFSET_HUMIDITY_PCT = 0         # Int
+OFFSET_PM25 = 0                 # Int
+
+
