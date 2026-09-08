@@ -7,3 +7,22 @@ Note: The file: 'main_window.ui' is the original QT6 Designer file - it is inclu
 
 The command to compile the .ui file for windows is shown here: ```pyuic6 -x main_window.ui -o ui_main_window.py```
    
+You need the files here and the files in the directory: 'resources' for the App to function correctly.  
+
+The directory tree on your PC should look like,  
+
+PC Side  
+├── resources  
+│   ├── __init__.py  
+│   ├── aqm_client.py  
+│   ├── info_popup.py  
+│   ├── main_window.ui  
+│   ├── ping.py  
+│   ├── pyqt_threading.py  
+│   ├── python_org_style.qss  
+│   └── ui_main_window.py  
+├── ini.py  
+└── main.py  
+
+--- Fini ---
+  
